@@ -8,6 +8,7 @@ class Datagrid
     protected $columns;
     protected $generatedRows;
     protected $data;
+    protected $view;
     
     public function __construct()
     {
@@ -56,19 +57,17 @@ class Datagrid
         
         foreach($this->getData() as $dataRow)
         {
-            $generatedColumn = new ArrayCollection();
+            $generatedRow = new ArrayCollection();
             
             foreach($this->getColumns() as $column)
             {  
                 /* @var $column Column */
                 $value = $column->getValue($this,$dataRow);
-                $generatedColumn->add($value);
+                $generatedRow->add($value);
             }
             
-            $generatedRows->add($generatedColumn);
+            $this->generatedRows->add($generatedRow);
         }
-        
-        $this->generatedRows = $generatedRows;
         
         return $this;
     }
@@ -80,6 +79,23 @@ class Datagrid
     {
         return $this->generatedRows;
     }
+	/**
+     * @return the $view
+     */
+    public function getView ()
+    {
+        return $this->view;
+    }
+
+	/**
+     * @param field_type $view
+     */
+    public function setView ($view)
+    {
+        $this->view = $view;
+        return $this;
+    }
+
  
 
 }
