@@ -1,0 +1,23 @@
+{
+    "name": "nekken/datagrid",
+    "type": "library",
+    "description": "PHP datagrid component",
+    "keywords": ["datagrid", "php"],
+    "homepage": "https://github.com/nekken/datagrid",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Ken Nguyen",
+            "email": "ken@nekken.ca",
+            "homepage": "http://www.nekken.ca/"
+        }
+    ],
+    "require": {
+        "doctrine/common": "~2.4"
+    },
+    "autoload": {
+        "psr-4": {
+            "Nekken\\Datagrid\\": "src"
+        }
+    }
+}
