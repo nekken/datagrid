@@ -73,13 +73,13 @@ class Datagrid
         return $this;
     }
     
-	/**
+	/**  
      * @return the $generatedRows
      */
     public function getGeneratedRows ()
     {
         return $this->generatedRows;
     }
-
+ 
 
 }
