@@ -59,7 +59,7 @@ class Datagrid
             $generatedColumn = new ArrayCollection();
             
             foreach($this->getColumns() as $column)
-            {
+            {  
                 /* @var $column Column */
                 $value = $column->getValue($this,$dataRow);
                 $generatedColumn->add($value);
