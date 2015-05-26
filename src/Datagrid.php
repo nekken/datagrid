@@ -14,7 +14,7 @@ class Datagrid
         $this->columns = new ArrayCollection();
         $this->generatedRows = new ArrayCollection();
         $this->data = new ArrayCollection();
-    }
+    } 
     
     public function getColumns () 
     { 
